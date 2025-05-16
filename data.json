@@ -1,0 +1,16 @@
+[
+  {
+    "nome": "Motor Renault Clio 1.2 16V",
+    "descricao": "Motor em bom estado com 120.000km.",
+    "preco": "€450",
+    "imagem": "img/peca1.jpg",
+    "link": "https://www.olx.pt/anuncio/motor-renault-clio-ID123456.html"
+  },
+  {
+    "nome": "Caixa de Velocidades VW Golf V",
+    "descricao": "Manual, 6 velocidades, usada mas funcional.",
+    "preco": "€250",
+    "imagem": "img/peca2.jpg",
+    "link": "https://www.olx.pt/anuncio/caixa-vw-golf-ID654321.html"
+  }
+]
