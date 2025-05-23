@@ -1,13 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
-  fetch('pecas.json')
+  fetch('data.json')
     .then(res => res.json())
     .then(data => carregarDestaques(data))
-    .catch(err => console.error("Erro ao carregar peças:", err));
+    .catch(err => {
+      console.error("Erro ao carregar peças:", err);
+      const container = document.getElementById("destaques-container");
+      container.innerHTML = `<p style="color:red;">Erro ao carregar peças. Verifica se o ficheiro data.json está no local certo.</p>`;
+    });
 });
 
 function carregarDestaques(pecas) {
-  const secao = document.querySelector(".highlights");
-  const container = document.createElement("div");
+  const container = document.getElementById("destaques-container");
+  container.innerHTML = ""; // limpa se já houver conteúdo
 
   pecas.forEach(peca => {
     const div = document.createElement("div");
@@ -21,7 +25,4 @@ function carregarDestaques(pecas) {
     `;
     container.appendChild(div);
   });
-
-  secao.innerHTML = "<h3>Destaques</h3>";
-  secao.appendChild(container);
 }
